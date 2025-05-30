@@ -1,0 +1,510 @@
+/* Genel Stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header - Galeriden alınan navbar stili */
+header {
+    background: #0c0056;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Yuvarlak Atatürk Resmi */
+.ataturk-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ataturk-img.left {
+    left: 20px;
+}
+
+.ataturk-img.right {
+    right: 20px;
+}
+
+.ataturk-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Canlı Saat ve Tarih */
+.live-clock {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    z-index: 100;
+}
+
+/* Gece/Gündüz Modu Butonu */
+.theme-btn {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.theme-btn i {
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Kaydırılabilir Haberler */
+.news-ticker {
+    background: #bb0a1e;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ff4a3d;
+    transform: scale(1.05);
+}
+
+.volume-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.volume-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.volume-btn i {
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Features Section - Kartlar küçültüldü */
+.features {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+    cursor: pointer;
+    width: 325px;
+    height: 420px;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.news-card .card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.news-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.news-card .details {
+    padding: 8px;
+    overflow: hidden;
+    background: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.news-card:hover .details {
+    opacity: 1;
+}
+
+.news-card .details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.news-card .details p {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+.news-card .details a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.news-card .details a:hover {
+    text-decoration: underline;
+}
+
+.news-card .favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.news-card .favorite-btn:hover {
+    background: rgba(255, 59, 48, 0.8);
+}
+
+.news-card .favorite-btn i {
+    color: #ff3b30;
+    font-size: 1.2rem;
+}
+
+.news-card .favorite-btn.active i {
+    color: #fff;
+}
+
+/* Etkileşimli Harita */
+.interactive-map {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.interactive-map iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Anı Defteri */
+.memorial-book {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#memorial-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#memorial-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-height: 150px;
+    margin-bottom: 15px;
+}
+
+#memorial-form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#memorial-form button:hover {
+    background-color: #ff4a3d;
+}
+
+/* Galeri Önizleme */
+.gallery-preview {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+}
+
+/* Animasyonlar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-theme .features,
+.dark-theme .memorial-book {
+    background-color: #2a2a2a;
+}
+
+.dark-theme .news-card {
+    background-color: #333;
+}
+
+.dark-theme .news-card h3,
+.dark-theme .news-card p {
+    color: #f0f0f0;
+}
+
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .ataturk-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    
+    .hero p {
+        font-size: 1.2em;
+    }
+    
+    .features .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .news-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çanakkale Şehitleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="live-clock" class="live-clock">
+        <span id="date"></span>
+        <span id="time"></span>
+    </div>
+
+    <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="left">
+            Çanakkale Şehitlerimizi saygı ve minnetle anıyoruz. 18 Mart Çanakkale Zaferi kutlu olsun!
+        </marquee>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="ataturk-img left">
+                <img src="images/ataturk.jpg" alt="Atatürk">
+            </div>     
+
+            <h1>Çanakkale Şehitlerini Anıyoruz</h1>
+
+            <div class="ataturk-img right">
+                <img src="images/ataturk.jpg" alt="Atatürk">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+
+        <button id="volume-control" class="volume-btn">
+            <i class="fas fa-volume-mute"></i> 
+        </button>
+
+        <div class="container">
+            <h2>Çanakkale Geçilmez!</h2>
+            <p>Çanakkale Savaşı'nda şehit düşen kahramanlarımızı saygı ve minnetle anıyoruz.</p>
+            <a href="about.html" class="btn">Daha Fazla Bilgi</a>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <div class="news-card">
+                <img src="images/brn.webp" alt="Tarihi Önem">
+                <div class="card-content">
+                    <h3>Tarihi Önem</h3>
+                    <p>Çanakkale Savaşı, Türk tarihinin en önemli dönüm noktalarından biridir.</p>
+                </div>
+                <div class="details">
+                    <h4>Detaylar</h4>
+                    <p>Çanakkale Savaşı, I. Dünya Savaşı sırasında Osmanlı İmparatorluğu ile İtilaf Devletleri arasında gerçekleşmiştir. Bu savaş, Türk milletinin bağımsızlık mücadelesinin simgesidir.</p>
+                    <a href="#">Daha Fazla Bilgi</a>
+                </div>
+                <button class="favorite-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+    
+            <div class="news-card">
+                <img src="images/image_750x_5bf87c7476a3d.jpg" alt="Şehitlerimiz">
+                <div class="card-content">
+                    <h3>Şehitlerimiz</h3>
+                    <p>Vatanımız için canlarını feda eden şehitlerimizi unutmadık, unutmayacağız.</p>
+                </div>
+                <div class="details">
+                    <h4>Detaylar</h4>
+                    <p>Çanakkale Savaşı'nda 250.000'den fazla şehit verdik. Bu kahramanlar,vatanımızın bağımsızlığı için canlarını feda ettiler.</p>
+                    <a href="#">Daha Fazla Bilgi</a>
+                </div>
+                <button class="favorite-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+    
+            <div class="news-card">
+                <img src="images/egitim.jpg" alt="Eğitim">
+                <div class="card-content">
+                    <h3>Eğitim</h3>
+                    <p>Gençlerimize bu kahramanlık destanını anlatmaya devam ediyoruz.</p>
+                </div>
+                <div class="details">
+                    <h4>Detaylar</h4>
+                    <p>Çanakkale ruhunu gençlerimize aktarmak için eğitim programları düzenliyoruz. Bu programlarla, tarihimizi ve şehitlerimizi unutmuyoruz.</p>
+                    <a href="#">Daha Fazla Bilgi</a>
+                </div>
+                <button class="favorite-btn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="interactive-map">
+        <div class="container">
+            <h2>Çanakkale Savaşı Haritası</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.073144447123!2d26.40631531538716!3d40.190888979391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b1a2f7a9d9d9b5%3A0x9c9c9c9c9c9c9c9c!2sÇanakkale%20Savaşı%20Alanı!5e0!3m2!1str!2str!4v1631234567890!5m2!1str!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="memorial-book">
+        <div class="container"> 
+            <h2>Şehitlerimiz İçin Mesaj Bırakın</h2>
+            <form id="memorial-form">
+                <textarea id="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+            <div id="memorial-messages">
+            </div>
+        </div>
+    </section>
+    <section class="gallery-preview">
+        <div class="container">
+            <h2>Galeriden Bir Bakış</h2>
+            <div class="gallery-grid">
+                <img src="images/çanakkale.webp" alt="Çanakkale Savaşı">
+                <img src="images/Canakkale.jpg" alt="Çanakkale Şehitleri">
+                <img src="images/canakkalesavasi3.webp" alt="Çanakkale Anıtı">
+            </div>
+            <a href="gallery.html" class="btn">Tüm Galeriyi Gör</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Çanakkale Şehitleri Anma Sitesi</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
